@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>To‑Do — Minimal & Fast</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<header>
+<div class="title">✅ To‑Do — Minimal & Fast</div>
+<div class="controls">
+<label class="toggle" title="Toggle light/dark">
+<input id="themeToggle" type="checkbox" aria-label="Toggle theme">
+</label>
+<button id="exportBtn" class="btn" title="Export tasks as JSON">Export</button>
+</div>
+</header>
+
+
+<section class="panel" aria-label="To‑Do App">
+<div class="add">
+<input id="newTask" type="text" placeholder="Add a task and press Enter…" aria-label="Task text" />
+<button class="btn btn-add" id="addBtn">Add</button>
+</div>
+
+
+<div class="bar">
+<div class="filters" role="tablist" aria-label="Filters">
+<button class="chip active" data-filter="all" aria-selected="true">All</button>
+<button class="chip" data-filter="active">Active</button>
+<button class="chip" data-filter="completed">Completed</button>
+</div>
+<div class="search">
+<input id="search" type="search" placeholder="Search…" aria-label="Search tasks" />
+<button class="btn" id="clearCompleted">Clear Completed</button>
+</div>
+</div>
+
+
+<ul id="list" class="tasks" aria-live="polite"></ul>
+
+
+<div class="footer">
+<div class="muted"><span id="count">0</span> items • <span id="activeCount">0</span> active</div>
+<div class="muted">Drag to reorder • Enter to save edits</div>
+</div>
+</section>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
